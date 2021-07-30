@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bookshelf Apps</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    </head>
+
+    <body class="container bg-light">
+
+        <div class="card p-5 m-5">
+        
+        <h1 class="text-center p-5 fw-bold">Bookshelf Apps</h1>
+        
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <button class="nav-link active" id="nav-list-tab" data-bs-toggle="tab" data-bs-target="#nav-list" type="button" role="tab" aria-controls="nav-list" aria-selected="true">List buku</button>
+              <button class="nav-link" id="nav-add-tab" data-bs-toggle="tab" data-bs-target="#nav-add" type="button" role="tab" aria-controls="nav-add" aria-selected="false">Tambah buku</button>
+              <button class="nav-link" id="nav-search-tab" data-bs-toggle="tab" data-bs-target="#nav-search" type="button" role="tab" aria-controls="nav-search" aria-selected="false">Cari buku</button>
+            </div>
+        </nav>
+          <div class="tab-content" id="nav-tabContent">
+
+            <div class="pt-2 tab-pane fade show active" id="nav-list" role="tabpanel" aria-labelledby="nav-list-tab">
+                <div class="row">
+                    <div class="col-6">
+                        <h4>Selesai dibaca</h4>
+                        <div id="buku-selesai">
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <h4>Belum selesai</h4>
+                        <div id="buku-belum">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-2 tab-pane fade" id="nav-add" role="tabpanel" aria-labelledby="nav-add-tab">
+                <form id="form_tambah">
+                    <div class="mb-2">
+                        <label class="form-label">Judul buku</label>
+                        <input class="form-control" type="text" id="i_judul" value="Lorem Ipsum" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Penulis</label>
+                        <input class="form-control" type="text" id="i_penulis" value="Richard Marx" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Tahun</label>
+                        <input class="form-control" type="number" id="i_tahun" value="2017" required>
+                    </div>
+                    <div class="mb-2 form-check">
+                      <label class="form-check-label">Selesai dibaca</label>
+                        <input class="form-check-input" id="i_selesai" type="checkbox">
+                    </div>
+                    <div class="mt-3 ">
+                        <button class="btn btn-primary" type="submit">Tambah</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="pt-2 tab-pane fade" id="nav-search" role="tabpanel" aria-labelledby="nav-search-tab">
+                <form id="searchBook">
+                    <div class="input-group">
+                        <input class="form-control" placeholder="Masukkan judul..." type="text">
+                        <button class="btn btn-primary" type="submit">Cari</button>
+                    </div>
+                </form>
+            </div>
+
+          </div>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/components.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+
+</html>
